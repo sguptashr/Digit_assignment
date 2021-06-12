@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="Hello.js" defer></script>
+</head>
+<body class="main">
+    <div class="header">
+        <div class="">
+            <img class="backImg" src="assets/back.svg"/>
+            <img class="logoImg" src="assets/logo.png"/>
+        </div>
+        <img class="contactImg" src="assets/contact.svg"/>
+    </div>
+    <div class="progress-container showProgress">
+        <div class="progress-bar" id="my-bar"></div>
+    </div>
+    <div class="slider">
+        <div class="sliderHeader">Select your plan & fill up your details</div>
+        <div class="d-flex">
+            <div class="card">
+                <div class="cardTop">Recommended</div>
+                <div class="cardtxt1">
+                    <b>Comprehensive Cover </b>with Pre-inspection
+                    <img class="contactImg" src="assets/info-icon.svg"/>
+                </div>
+                <div class="cardtxt2">Share 7 images of your car and get 25% off</div>
+                <div class="cardtxt3 d-flex">₹ 5,495 <span class="cardsubtxt3 ml-1" >25% off</span></div>
+            </div>
+            <div class="card">
+                <div class="cardtxt1">
+                    <b>Comprehensive Cover </b>with Pre-inspection
+                    <img class="contactImg" src="assets/info-icon.svg"/>
+                </div>
+                <div class="cardtxt2">Share 7 images of your car and get 25% off</div>
+                <div class="cardtxt3 d-flex">₹ 6,495</div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <div class="">
+            <div class="slidertxt">Select Value 1</div>
+            <div class="containerSlide1">
+                <input type="range" min="100" max="400" value="100" step="100" list="tickmarks1" id="rangeInput1" oninput="output1.value = rangeInput1.value">
+                <datalist id="tickmarks1">
+                  <option>100</option>
+                  <option>200</option>
+                  <option>300</option>
+                  <option>400</option>
+                </datalist>
+                <div>
+                    <output class="outputPos" id="output1" for="rangeInput1">100</output>
+                </div>
+                <!--<output id="output" for="rangeInput">50</output>  Just to display selected value -->
+            </div>
+        </div>
+        <div class="borRight"></div>
+        <div class="">
+            <div class="slidertxt">Select Value 2</div>
+            <div class="containerSlide2">
+                <input type="range" min="0" max="15" value="0" step="5" list="tickmarks2" id="rangeInput2" oninput="output2.value = rangeInput2.value + '%'">
+                <datalist id="tickmarks2">
+                  <option>15%</option>
+                  <option>10%</option>
+                  <option>5%</option>
+                  <option>0</option>
+                </datalist>
+                <output class="outputPos" id="output2" for="rangeInput2">0%</output>
+                <!--<output id="output" for="rangeInput">50</output>  Just to display selected value -->
+            </div>
+        </div>
+        <div class="borRight"></div>
+        <div class="">
+            <div class="slidertxt">Select Value 3</div>
+            <div class="containerSlide3">
+                <input type="range" min="10" max="40" value="10" step="10" list="tickmarks3" id="rangeInput3" oninput="output3.value = rangeInput3.value">
+                <datalist id="tickmarks3">
+                <option>40</option>
+                <option>30</option>
+                <option>20</option>
+                <option>10</option>
+                </datalist>
+                <output class="outputPos" id="output3" for="rangeInput3">10</output>
+                <!--<output id="output" for="rangeInput">50</output>  Just to display selected value -->
+            </div>
+        </div>
+    </div>
+    <div class="botBorder"></div>
+    <div class="details">
+        <div class="detailsHeader">Your Details</div>
+        <form>
+            <div class="form-group">
+                <label>Full name</label>
+                <input type="text" id="inputname" value="Shubham"/>
+            </div>
+            <div class="form-group">
+                <label>Mobile number</label>
+                <input type="number" id="mobNumber" value="1234567890"/>
+            </div>
+            <input type="email" id="inputMail" class="mailTxt" placeholder="Enter email address"/>
+        </form>
+    </div>
+    <div class="upload">
+        <div class="detailsHeader">Uploads</div>
+        <div class="d-flex uploadPan uploadBotMar">
+            <img class="checkImg" src="assets/check.svg" />
+            <span class="uploadtxt">Company PAN card</span>
+            <img class="editImg" src="assets/edit_grey.svg" />
+            <img class="previewImg" src="assets/preview.svg" />
+        </div>
+        <div class="d-flex uploadPan">
+            <img class="uploadImg" src="assets/upload.svg" />
+            <span class="uploadtxt uploadtxtColor">Upload Company address proof</span>
+        </div>
+    </div>
+    <div class="d-flex viewCost">
+        <span class="arrowtxt">View Cost Break Up</span>
+        <img class="arrowImg" src="assets/arrow-right.svg" />
+    </div>
+    <div class="premiumContinue d-flex">
+        <div class="premiumMarRight">
+            <div class="premiumtxt">Total Premium</div>
+            <div class="amounttxt">₹ 51,231<span class="amountyeartxt">Per year</span></div>
+        </div>
+        <div class="d-flex">
+            <div class="save d-flex">
+                <img class="saveImg" src="assets/save.svg" />
+            </div>
+            <button class="continuebutton m-0" id="continue" type="submit">Continue</button>
+        </div>
+    </div>
+
+</body>
+</html>
